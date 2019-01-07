@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Responsive Layout</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Styling  the body */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        /* Header/logo Title */
+
+        .header {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .header img {
+            vertical-align: middle;
+        }
+
+
+        /* Increase the font size of the heading */
+
+        .header h1 {
+            font-size: 40px;
+        }
+
+        .header .content {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 178, 226, .6);
+
+            /* Black background with transparency */
+            color: #00567C;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Styling the top navigation bar */
+
+        .navbar {
+            overflow: hidden;
+            background-color: rgb(95, 93, 93);
+
+        }
+
+        /* Style the navigation bar links */
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        #first {
+            color: #deef00;
+        }
+
+        /* Right-aligned link */
+
+        .navbar a.right {
+            float: right;
+        }
+
+        /* Change color on hover */
+
+        .navbar a:hover {
+
+            color: #deef00;
+        }
+
+        /* Column container */
+
+        .row {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE10 */
+            flex-wrap: wrap;
+        }
+
+        /* Creating two unequal columns that sits next to each other */
+
+        /* Sidebar/left column */
+
+        .side {
+            -ms-flex: 30%;
+            /* IE10 */
+            flex: 30%;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        /* Main column */
+
+        .main {
+            -ms-flex: 70%;
+            /* IE10 */
+            flex: 70%;
+            background-color: white;
+            padding: 20px;
+        }
+
+        /* Fake image, just for this example */
+
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Footer */
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #00567c;
+            color: white;
+        }
+
+        .foot {
+            text-decoration: none;
+            color: #337ab7;
+        }
+
+        h2 {
+            color: #00b2e2;
+        }
+
+        .main h3 span:hover {
+            cursor: pointer;
+            color: #00567c;
+
+        }
+
+        .main h3 {
+            color: #deef00;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+        @media screen and (max-width: 700px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+        @media screen and (max-width: 400px) {
+            .navbar a {
+                float: none;
+                width: 100%;
+            }
+            .content h1 {
+                font-size: 100%;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="hero-2.jpg" alt="Background Image" style="width:100%; ">
+        <div class="content">
+            <h1>nisum</h1>
+            <p style="color:white;">Our digital services combine strategic thinking with tangible and executable projects. From enterprise architecture
+                to application development and DevOps, we bring the tools, processes, and skills to enable high-functioning
+                digital organizations.</p>
+        </div>
+    </div>
+
+
+    <div class="navbar">
+        <a href="#" id="first">Who We Are</a>
+        <a href="#">What We Do</a>
+        <a href="#">Clients</a>
+        <a href="#" class="right">Careers</a>
+    </div>
+
+    <div class="row">
+        <div class="side">
+            <h2>About Me</h2>
+
+            <div class="fakeimg">
+                <img src="Imtiaz.png" alt="Imitaz CEO" style="width:100%; ">
+            </div>
+            <p>
+                <i>A preferred advisor to leading Fortune 500 brands, Nisum is a global business & technology consulting firm</i>
+            </p>
+            <h3 style="color:#00b2e2;">Insights</h3>
+            <p> CIOs, developers, CTOs, business leaders, executive boards — across the entire organization, digital transformation
+                is an ongoing and evolving business priority.</p>
+            <div class=" fakeimg  ">
+                <img src="Sarath.png" alt="Sarath" style="width:100%; height:auto;">
+            </div>
+            <br>
+            <div class="fakeimg ">
+                <img src="Sajid.jpg" alt="Sajid" style="width:100%; height:auto;">
+            </div>
+            <br>
+            <div class="fakeimg ">
+                <img src="Kyu.jpg" alt="Kyu" style="width:100%; height:auto;">
+            </div>
+        </div>
+        <div class="main ">
+            <h2>Services</h2>
+            <h3>
+                <span>CIO Advisory</span> &nbsp;
+                <span>Technology Enablement</span> &nbsp;
+                <span>Organizational Effectiness</span> &nbsp;
+                <span>Product Activation</span>
+            </h3>
+            <div class="fakeimg ">
+                <img src="placeholder.jpg" alt="Ideas" style="width:100%;height:auto;">
+            </div>
+
+            <p>As a partner that works shoulder-to-shoulder with you, our services are completely customer-centric. Integrated
+                and pragmatic, we help identify new opportunities to capture value across the organization and between silos.</p>
+            <br>
+            <h2>Areas of Expertise</h2>
+            <h3>
+                <span>Order Management</span> &nbsp;
+                <span>eCommerce</span> &nbsp;
+                <span>Agile Coaching</span> &nbsp;
+                <span>OmniChannel</span>
+            </h3>
+            <div class="fakeimg " style="height:auto; ">
+                <img src="placeholders.jpg" alt="Consulting" style="width:100%;">
+            </div>
+
+            <p>With over 16 years of deep technical and functional experience, our range of expertise is constantly growing
+                and evolving — much like the needs of your business. We have dedicated Practices and maintain Centers of
+                Excellence in certain key areas, producing thought leadership, research, frameworks and products for the
+                benefit of our clients.</p>
+        </div>
+    </div>
+
+    <div class="header ">
+        <img src="sanfran.jpg" alt="Consulting" style="width:100%; height:20%">
+    </div>
+    <div class="footer">© 2018 Nisum Technologies, Inc.
+        <br>
+        <a href=# class="foot">Terms and Conditions Privacy Policy Español</a>
+        <br>
+        <em>This is responive layout using
+            <b>floats and flex</b> with Desktop,tablet and mobile break points build by
+
+            <strong style="color:red">DHEERAJ MANTENA</strong>
+        </em>
+    </div>
+
+</body>
+
+</html>
